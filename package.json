@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Allwin-d/nodejs-backend-learning/issues"
   },
-  "homepage": "https://github.com/Allwin-d/nodejs-backend-learning#readme"
+  "homepage": "https://github.com/Allwin-d/nodejs-backend-learning#readme",
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "type": "module"
 }
