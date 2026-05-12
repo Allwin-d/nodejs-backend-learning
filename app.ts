@@ -2,6 +2,12 @@ import http, { IncomingMessage, ServerResponse } from "http";
 // Here we are importing the built-in http module
 // and importing the types for request and response objects
 
+type userDataType = {
+  name: string;
+  role: string;
+  hobby: string;
+};
+
 const checkingServer = (req: IncomingMessage, res: ServerResponse) => {
   console.log(req.method);
   // From req.method we get the HTTP method like GET, POST, PUT, DELETE...
@@ -12,7 +18,13 @@ const checkingServer = (req: IncomingMessage, res: ServerResponse) => {
   console.log(req.socket);
   // Here we get socket/network related information
 
-  res.end("Hello Allwin");
+  const userData: userDataType = {
+    name: "Allwin",
+    role: "FrontEnd Developer",
+    hobby: "Programming",
+  };
+  res.setHeader("Content-Type", "application/json");
+  res.end(JSON.stringify(userData));
 };
 
 const server = http.createServer(checkingServer);
