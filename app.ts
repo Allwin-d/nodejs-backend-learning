@@ -27,7 +27,7 @@ const checkingServer = (req: IncomingMessage, res: ServerResponse) => {
   res.end(JSON.stringify(userData));
 };
 
-const server = http.createServer(checkingServer);
+const server = http.createServer(checkingServer); //callback function (passing function as an argument)
 // Using the http module, we create a server with the createServer method
 
 server.listen(3000, () => {
