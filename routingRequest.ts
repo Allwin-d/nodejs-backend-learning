@@ -4,7 +4,7 @@ const routingRequest = (req: IncomingMessage, res: ServerResponse) => {
   const url = req.url;
 
   if (url === "/") {
-    res.setHeader("Content-Type", "text/html"); 
+    res.setHeader("Content-Type", "text/html");
     // sets response type as HTML so browser renders it properly
     res.write(`<html>`);
     res.write(`<header>`);
@@ -18,20 +18,20 @@ const routingRequest = (req: IncomingMessage, res: ServerResponse) => {
         <button type="submit">Submit</button>
       </form>
     `);
-    res.end(); 
+    res.end();
     // ends response and sends data to browser
   }
 
   if (url === "/submit") {
-    res.setHeader("Content-Type", "text/html"); 
+    res.setHeader("Content-Type", "text/html");
     // sets response type as HTML
     res.write(`Hello User`);
-    res.end(); 
+    res.end();
     // ends the response (server does NOT stop, only request ends)
   }
 };
 
-const server = http.createServer(routingRequest); 
+const server = http.createServer(routingRequest);
 // callback function executed for every incoming request
 
 server.listen(3000, () =>
