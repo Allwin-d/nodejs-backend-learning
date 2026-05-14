@@ -51,7 +51,7 @@ const user = (req: IncomingMessage, res: ServerResponse) => {
       const parsedBody = Buffer.concat(body).toString(); // ellaa chunks-aiyum join panni, binary Buffer-ai readable string-aa convert pannurom
       console.log("Parsed Data : ", parsedBody); // eg: username=john
       res.statusCode = 200;
-      res.write(`<html><h1>Created ${parsedBody}</h1></html>`);
+      res.write(`<html><h1>Created ${parsedBody.split("=")[1]}</h1></html>`);
       res.end();
     });
   } else {
@@ -64,6 +64,7 @@ const user = (req: IncomingMessage, res: ServerResponse) => {
 
 const server = http.createServer(user); // ovvoru incoming request-kuم user callback-ai trigger panna server create pannurom
 
-server.listen(3000, () => { // port 3000-la incoming requests-ai listen pannurom
+server.listen(3000, () => {
+  // port 3000-la incoming requests-ai listen pannurom
   console.log("Server running for the User");
 });
