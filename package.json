@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node app.ts",
-    "routingRequest": "ts-node routingRequest.ts"
+    "routingRequest": "ts-node routingRequest.ts",
+    "user": "ts-node ./Assignment_1_http_server_fundamental/User.ts"
   },
   "repository": {
     "type": "git",
