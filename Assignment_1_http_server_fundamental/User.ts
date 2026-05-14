@@ -38,6 +38,7 @@ const user = (req: IncomingMessage, res: ServerResponse) => {
       </form>
     `);
     res.write(`</body></html>`);
+    res.write("hello");
     return res.end();
   } else if (url === "/create-user" && method === "POST") {
     const body: Buffer[] = []; // network la varum binary chunks-ai store panna Buffer array
