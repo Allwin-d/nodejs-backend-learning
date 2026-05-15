@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node app.ts",
     "routingRequest": "ts-node routingRequest.ts",
-    "user": "nodemon --exec ts-node-esm ./assignment_1_http_server_fundamental/User.ts"
+    "user": "nodemon --exec ts-node-esm ./assignment_1_http_server_fundamental/User.ts",
+    "handlingRouting" :"nodemon --exec ts-node-esm ./Assignment_2_Express_Handling_routes/handlingRoutes.ts"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,14 @@
   },
   "homepage": "https://github.com/Allwin-d/nodejs-backend-learning#readme",
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^25.7.0",
     "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
