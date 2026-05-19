@@ -2,7 +2,7 @@ import express from "express";
 
 const router = express.Router();
 
-router.get("/userData", (req, res) => {
+router.get("/users-data", (req, res, next) => {
   res.json({
     name: "Dinesh",
     hobby: "Sleeping",
@@ -11,7 +11,7 @@ router.get("/userData", (req, res) => {
 });
 
 router.get("/", (req, res, next) => {
-  res.send(`<h1>This is for the "/" route</h1>`);
+  res.send(`<h1>This is for the "/users" route</h1>`);
 });
 
 export default router;

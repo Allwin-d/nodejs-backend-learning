@@ -9,7 +9,7 @@
     "routingRequest": "ts-node routingRequest.ts",
     "user": "nodemon --exec ts-node-esm ./assignment_1_http_server_fundamental/User.ts",
     "handlingRouting": "nodemon --exec ts-node-esm ./Assignment_2_Express_Handling_routes/handlingRoutes.ts",
-    "userData": "nodemon --exec ts-node ./Assignment_3/app.ts",
+    "usersData": "nodemon --exec ts-node ./Assignment_3/app.ts",
     "playersList": "nodemon --exec ts-node ./Assignment_3/app.ts"
   },
   "repository": {
