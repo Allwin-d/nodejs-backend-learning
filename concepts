@@ -1,0 +1,16 @@
+Frontend
+(Object)
+   ↓
+JSON.stringify()
+   ↓
+JSON String travels in internet
+   ↓
+Backend receives string
+   ↓
+express.json()
+   ↓
+Backend gets Object
+   ↓
+Convert to SQL query
+   ↓
+Database stores rows/columns
